@@ -4,6 +4,7 @@ Infrastructure as a Code for static content deployment using CloudFront, S3 and 
 Since the project is based on angular, so we need to use lambda@edge for client side routing.
 Because if we hit refresh button, CloudFront always look for the file or folder.
 Meanwhile for angular, we just want to do client side routing.
+
 *See the logic for lambda@edge under lambda/response_header_lambda.js*
 
 # Project Structure

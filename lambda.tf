@@ -11,7 +11,6 @@ resource "aws_lambda_function" "lambda" {
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
   handler          = var.lambda_handler_name
   runtime          = var.lambda_runtime
-  provider         = aws.lambda-edge
   publish          = "true"
   tags             = var.required_tags
 

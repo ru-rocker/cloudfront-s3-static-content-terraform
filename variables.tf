@@ -46,3 +46,13 @@ variable "required_tags" {
   type = map(string)
   description = "required tags"
 }
+
+variable "email_subscriber" {
+  description = "Email for SNS notification"
+  default = "aaa@abc.com"
+}
+
+variable "sns_topic_ddos" {
+  description = "SNS Topic for DDos Attack"
+  default = ""
+}
