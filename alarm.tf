@@ -23,6 +23,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_4xxCloudFront" {
     }
     return_data = true
   }
+  provider         = aws.lambda-edge
   tags             = var.required_tags
 }
 
@@ -51,6 +52,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_5xxCloudFront" {
     }
     return_data = true
   }
+  provider         = aws.lambda-edge
   tags             = var.required_tags
 }
 
@@ -77,5 +79,6 @@ resource "aws_cloudwatch_metric_alarm" "ddos_attack" {
     }
     return_data = true
   }
+  provider         = aws.lambda-edge
   tags             = var.required_tags
 }

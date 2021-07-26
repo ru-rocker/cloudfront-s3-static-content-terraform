@@ -1,6 +1,7 @@
 resource "aws_sns_topic" "static_content_sns" {
 
   name       = "${aws_cloudfront_distribution.s3_distribution.id}-SNS"
+  provider   = aws.lambda-edge
   tags       = var.required_tags
 
   depends_on = [
