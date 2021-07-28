@@ -12,6 +12,7 @@ resource "aws_sns_topic" "static_content_sns" {
 
 resource "aws_sns_topic_subscription" "static_content_sns_subscription" {
   topic_arn = aws_sns_topic.static_content_sns.arn
+  provider  = aws.lambda-edge
   protocol  = "email"
   endpoint  = var.email_subscriber
 }
